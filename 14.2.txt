@@ -1,0 +1,47 @@
+soal 14.2
+
+
+Buatlah fungsi validasi_kartu_kredit(nomor_kartu) yang dapat digunakan untuk mengecek validitas dari suatu nomor kartu kredit.  Ada tiga kemungkinan hasil pengecekan validasi ini:
+
+Tidak valid
+Valid Reguler
+Valid Platinum
+Syarat dan ketentuan:
+
+Panjang nomor kartu harus 16, semuanya adalah digit/angka
+Nomor kartu harus diawali dengan 4 atau 5 atau 6
+Jika nomor kartu valid dan di dalamnya ada angka 8 yang muncul berdekatan minimal 4 kali, maka itu adalah kartu spesial (Valid Platinum).  Jika tidak maka hanya kartu kredit biasa (Valid Reguler)
+Contoh:
+
+'1234567890' -> Tidak valid karena panjangnya tidak 16 digit
+'6111111111111111' -> Valid Reguler (panjang 16 digit, diawali dengan 6)
+
+'4234567888823456' -> Valid Platinum (panjang 16 digit, diawali dengan 4, di dalamnya ada minimal 4 angka 8 bersebelahan)
+'6819991b00098712'  -> Tidak valid karena tidak semuanya digit/angka
+
+
+Pemanggilan:
+nomor_kartu = '4234567888823456'
+hasil = validasi_kartu_kredit(nomor_kartu)
+print(hasil)
+Output
+Valid Platinum
+
+
+
+Batasan
+
+Nomor kartu berupa string dengan panjang > 0
+Fungsi anda harus return sebuah String yang kemungkinannya: 'Tidak valid', 'Valid Reguler' dan 'Valid Platinum'
+
+For example:
+
+Test	Result
+nomor_kartu = '4234567888823456'
+hasil = validasi_kartu_kredit(nomor_kartu)
+print(hasil)
+Valid Platinum
+nomor_kartu = '4111111111111111'
+hasil = validasi_kartu_kredit(nomor_kartu)
+print(hasil)
+Valid Reguler
